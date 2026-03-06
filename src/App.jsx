@@ -162,9 +162,9 @@ const MainGallery = () => {
     <MainContainer>
       <header style={{ textAlign: "center", marginBottom: "50px" }}>
         <Badge>Interactive Test Lab</Badge>
-        <MainTitle>ランクラムプ診断所</MainTitle>
+        <MainTitle>ココロ雑貨店</MainTitle>
         <SubTitle>
-          あなたも知らない「もうひとりの自分」を見つけましょう。
+          あなたの心に必要な「気づき」が見つかる場所。
         </SubTitle>
       </header>
 
