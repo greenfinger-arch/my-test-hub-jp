@@ -152,27 +152,23 @@ const activeTestKeys = Object.keys(testRegistry).filter(
   (key) => testRegistry[key].isReady === true,
 );
 
-// 2. 메인 페이지 컴포넌트
+// 2. 메인 갤러리 (일본어 현지화)
 const MainGallery = () => {
-  // [추가] 리액트 라우터의 내비게이션 기능을 가져옵니다.
   const navigate = useNavigate();
 
   return (
     <MainContainer>
       <header style={{ textAlign: "center", marginBottom: "50px" }}>
         <Badge>Interactive Test Lab</Badge>
-        <MainTitle>랭크램프 심리 연구소</MainTitle>
-        <SubTitle>나도 몰랐던 내 안의 '부캐'를 찾아보세요.</SubTitle>
+        <MainTitle>ランクラムプ診断所</MainTitle>
+        <SubTitle>
+          あなたも知らない「もうひとりの自分」を見つけましょう。
+        </SubTitle>
       </header>
 
       <Grid>
-        {/* activeTestKeys만 순회하며 공개된 테스트만 노출합니다. */}
         {activeTestKeys.map((key) => (
-          <TestCard
-            key={key}
-            // [수정] window.location.href 대신 navigate 함수를 사용합니다.
-            onClick={() => navigate(`/${key}`)}
-          >
+          <TestCard key={key} onClick={() => navigate(`/${key}`)}>
             <CardImg
               $src={
                 testRegistry[key].mainImg ||
@@ -180,42 +176,35 @@ const MainGallery = () => {
               }
             />
             <CardBody>
-              <CardTag>Premium</CardTag>
+              <CardTag>NEW</CardTag>
               <CardHead>{testRegistry[key].title}</CardHead>
               <CardDesc>{testRegistry[key].subTitle}</CardDesc>
             </CardBody>
           </TestCard>
         ))}
       </Grid>
-      <Footer>© 2026 Ranklamp Play. All rights reserved.</Footer>
+      <Footer>© 2026 Ranklamp Play Japan. All rights reserved.</Footer>
     </MainContainer>
   );
 };
 
-// 3. 페이지 로더 로직
+// 3. 페이지 로더 (기존 로직 유지)
 const AutoTestLoader = () => {
-  // 1. 현재 접속한 경로(Path)에서 공백이나 슬래시를 제거하고 순수한 키값만 추출합니다.
   const path = window.location.pathname.replace(/^\/|\/$/g, "");
-
-  // 2. 경로가 없으면(메인 페이지면) 갤러리를 보여줍니다.
   if (!path) return <MainGallery />;
 
-  // 3. 레지스트리에서 해당 경로에 맞는 데이터를 가져옵니다.
   const data = testRegistry[path];
 
-  // 4. [핵심 수정] 데이터가 아예 없거나(존재하지 않는 주소),
-  //    데이터는 있지만 isReady가 true가 아니라면(작업 중) 메인으로 리다이렉트합니다.
   if (!data || data.isReady !== true) {
     return <Navigate to="/" replace />;
   }
 
-  // 5. 모든 검문을 통과했다면(데이터가 있고 준비됨) 테스트 화면을 보여줍니다.
   return <TestManager data={data} />;
 };
 
-// 4. 테스트 엔진
+// 4. 테스트 엔진 (일본어 현지화)
 const TestManager = ({ data }) => {
-  const navigate = useNavigate(); // [추가] 이 줄을 추가합니다.
+  const navigate = useNavigate();
   const [step, setStep] = useState(0);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [score, setScore] = useState({});
@@ -226,7 +215,7 @@ const TestManager = ({ data }) => {
       setCurrentIdx(currentIdx + 1);
     } else {
       setStep(2);
-      setTimeout(() => setStep(3), 1500);
+      setTimeout(() => setStep(3), 1800); // 일본 사용자는 분석 연출을 조금 더 즐기는 경향이 있어 1.8초로 약간 조정
     }
   };
 
@@ -238,16 +227,19 @@ const TestManager = ({ data }) => {
   };
 
   const handleShare = async () => {
+    const resultText = `私の結果は【${getResult().name}】でした！\n#ランクラムプ診断 #性格診断`;
     const shareData = {
       title: data.title,
-      text: `나의 결과는 [${getResult().name}]!`,
+      text: resultText,
       url: window.location.href,
     };
     try {
       if (navigator.share) await navigator.share(shareData);
       else {
-        await navigator.clipboard.writeText(window.location.href);
-        alert("링크가 복사되었습니다!");
+        await navigator.clipboard.writeText(
+          `${resultText}\n${window.location.href}`,
+        );
+        alert("リンクをコピーしました！SNSに貼り付けてシェアしてね✨");
       }
     } catch (err) {
       console.log(err);
@@ -267,7 +259,7 @@ const TestManager = ({ data }) => {
               {data.subTitle}
             </SubTitle>
             {data.mainImg && <MainBanner src={data.mainImg} alt="main" />}
-            <MainButton onClick={() => setStep(1)}>테스트 시작하기</MainButton>
+            <MainButton onClick={() => setStep(1)}>診断を始める</MainButton>
           </FadeContainer>
         )}
 
@@ -296,18 +288,22 @@ const TestManager = ({ data }) => {
         {step === 2 && (
           <LoadingWrapper>
             <Spinner />
-            <LoadingText>결과 분석 중...</LoadingText>
+            <LoadingText>
+              結果を分析中です...
+              <br />
+              少々お待ちください
+            </LoadingText>
           </LoadingWrapper>
         )}
 
         {step === 3 && result && (
           <FadeContainer>
-            <Badge>나의 맞춤 결과</Badge>
+            <Badge>あなたにぴったりの結果</Badge>
             <ResultName>{result.name}</ResultName>
             <ContentImage
               src={result.img}
               alt="res"
-              style={{ height: "180px" }}
+              style={{ height: "180px", borderRadius: "15px" }}
             />
             <ResultDesc>{result.desc}</ResultDesc>
 
@@ -318,23 +314,22 @@ const TestManager = ({ data }) => {
               {result.ctaText}
             </AffiliateButton>
 
-            {/* 면책 문구 */}
+            {/* 일본 법적 공지 문구 (스티어링 규제 대응) */}
             <p
               style={{
                 fontSize: "11px",
-                color: "#999",
+                color: "#aaa",
                 marginTop: "10px",
                 marginBottom: "10px",
                 textAlign: "center",
                 lineHeight: "1.4",
-                wordBreak: "keep-all",
               }}
             >
-              본 서비스는 파트너스 활동을 통해, 일정액의 수수료를 제공받을 수
-              있습니다.
+              ※ 本ページ는
+              Amazonアソシエイト等のアフィリエイトプログラムに参加しており、適格販売により収入を得る場合があります。
             </p>
 
-            <ShareButton onClick={handleShare}>결과 공유하기</ShareButton>
+            <ShareButton onClick={handleShare}>結果をシェアする</ShareButton>
 
             {/* [신규 추가] 메인 블로그 기사 연결 버튼 */}
             {data.relatedPostUrl && (
@@ -344,7 +339,7 @@ const TestManager = ({ data }) => {
                   style={{
                     backgroundColor: "transparent",
                     border: "none",
-                    color: "#4a90e2",
+                    color: "#007AFF",
                     fontSize: "14px",
                     fontWeight: "bold",
                     cursor: "pointer",
@@ -352,7 +347,7 @@ const TestManager = ({ data }) => {
                     padding: "5px 10px",
                   }}
                 >
-                  📖 전문 가이드 기사 읽어보기 →
+                  📖 専門家のアドバイスを読む →
                 </button>
               </div>
             )}
@@ -365,13 +360,13 @@ const TestManager = ({ data }) => {
                   setScore({});
                 }}
               >
-                다시하기
+                もう一度診断する
               </TextActionButton>
 
               <Divider>|</Divider>
 
               <TextActionButton onClick={() => navigate("/")}>
-                다른 테스트 보기 →
+                他の診断を見る →
               </TextActionButton>
             </ActionGroup>
           </FadeContainer>
