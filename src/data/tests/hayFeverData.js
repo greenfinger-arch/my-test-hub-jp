@@ -1,4 +1,4 @@
-export const hayFeverDataJP = {
+export const hayFeverData = {
   id: "hayFever",
   title: "春の宿命！あなたの「花粉症サバイバル」診断",
   subTitle: "鼻水、目のかゆみ… 今年もやってきた強敵。あなたの現在の戦闘力（耐性）は？",

@@ -9,7 +9,7 @@ import {
 import styled, { createGlobalStyle, keyframes } from "styled-components";
 
 // 데이터 임포트
-import { hayFeverDataJP } from "./data/tests/hayFeverDataJP";
+import { hayFeverData } from "./data/tests/hayFeverData";
 
 // 1. 전역 스타일 및 애니메이션
 const GlobalStyle = createGlobalStyle`
@@ -28,7 +28,7 @@ const fadeIn = keyframes` from { opacity: 0; transform: translateY(15px); } to {
 
 // 테스트 레지스트리
 const testRegistry = {
-  hayFever: hayFeverDataJP,
+  hayFever: hayFeverData,
 };
 
 // [삽입 코드 1] 공개 가능한 테스트 키값만 추출 (isReady가 true인 것만)
@@ -67,7 +67,7 @@ const MainGallery = () => {
           </TestCard>
         ))}
       </Grid>
-      <Footer>© 2026 Ranklamp Play Japan. All rights reserved.</Footer>
+      <Footer>© 2026 zakkarank Play Japan. All rights reserved.</Footer>
     </MainContainer>
   );
 };
