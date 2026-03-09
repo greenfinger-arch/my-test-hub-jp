@@ -53,28 +53,28 @@ export const hayFeverData = {
       img: "/images/hayFever01.jpg",
       desc: "目のかゆみが限界のあなた。今は無理せず、目を休めることが最優先です！冷たいアイマスクでリフレッシュして、自分をたっぷり甘やかしてあげてくださいね。大丈夫、春は必ず（花粉と共に）過ぎ去ります。",
       ctaText: "疲れた目を癒やす温冷アイマスクを見る",
-      affiliateLink: "https://www.amazon.co.jp/s?k=アイマスク+冷やす"
+      affiliateLink: "https://amzn.to/4lja5Gr"
     },
     NOSE: {
       name: "くしゃみ連発「人間噴水」級",
       img: "/images/hayFever02.jpg",
       desc: "鼻水が止まらず、ティッシュが手放せないあなた。鼻の下がヒリヒリしていませんか？高級ティッシュや鼻腔ケアアイテムは、この時期のあなたへの『投資』です。呼吸を楽にして、少しでも快適な夜を過ごしましょう！",
       ctaText: "鼻に優しいプレミアムティッシュを見る",
-      affiliateLink: "https://www.amazon.co.jp/s?k=高級ティッシュ"
+      affiliateLink: "https://amzn.to/3PrurkU"
     },
     DEFENSE: {
       name: "防御力MAX「花粉シールド」級",
       img: "/images/hayFever03.jpg",
       desc: "徹底した対策で花粉を寄せ付けないプロフェッショナル！でも、その緊張感で心まで疲れていませんか？お家の中だけでも、空気清浄機とアロマでリラックスできる『聖域』を作ってみてください。",
       ctaText: "強力な花粉対策！空気清浄機ランキング",
-      affiliateLink: "https://www.amazon.co.jp/s?k=空気清浄機+花粉"
+      affiliateLink: "https://amzn.to/4rSU8cC"
     },
     SURVIVOR: {
       name: "奇跡の根性「花粉共存」級",
       img: "/images/hayFever04.jpg",
       desc: "辛いけれど、どこか達観しているあなた。でも、我慢しすぎは禁物です！最新のサプリや対策スプレーを取り入れるだけで、世界がもっと明るく見えるかもしれません。自分を労わることを忘れないでくださいね。",
       ctaText: "シュッとするだけ！最新花粉ガードスプレー",
-      affiliateLink: "https://www.amazon.co.jp/s?k=花粉ガードスプレー"
+      affiliateLink: "https://amzn.to/4bfFPba"
     }
   }
 };
