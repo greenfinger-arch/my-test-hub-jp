@@ -62,7 +62,7 @@ export const WalletFortuneData = {
       name: "最強の金運！「お金のマグネット」状態",
       img: "/images/jpWalletRes01.jpg",
       desc: "おめでとうございます！あなたの財布はお金を引き寄せる強力な磁石になっています。今の習慣を続ければ、2026年は大きな臨時収入や昇給が期待できるでしょう。さらに運気を高めるには、金色の「種銭」をお守りとして入れてみてください。",
-      ctaText: "最強金운を呼ぶ「蛇革のお守り」を見る",
+      ctaText: "最強金運を呼ぶ「蛇革のお守り」を見る",
       affiliateLink: "https://amzn.to/4uqGLlu"
     },
     SAVE: {
