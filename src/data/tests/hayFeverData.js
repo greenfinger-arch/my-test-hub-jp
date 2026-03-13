@@ -27,7 +27,7 @@ export const hayFeverData = {
       img: "/images/hayFever3.jpg",
       a: [
         { text: "綺麗だなぁ…（でも鼻がムズムズして集中できない） 🌸", type: "NOSE" },
-        { text: "ごめん、今はただの『花粉の爆탄』にしか見えない 💣", type: "EYE" }
+        { text: "ごめん、今はただの『花粉の爆弾』にしか見えない 💣", type: "EYE" }
       ]
     },
     {
