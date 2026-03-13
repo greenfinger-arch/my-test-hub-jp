@@ -1,4 +1,4 @@
-export const jpEntranceFengShuiData = {
+export const EntranceFengShuiData = {
   id: "jp-entrance-fengshui",
   title: "運気の入り口！『開運玄関』診断",
   relatedPostUrl: "https://zakkarank.com/2026-entrance-fengshui-tips/",
