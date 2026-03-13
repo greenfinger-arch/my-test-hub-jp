@@ -69,7 +69,7 @@ export const PlantMiracleData = {
       name: "액운을 뚫고 솟아나는 생명력, '산스베리아'",
       img: "/images/krPlantRes02.jpg",
       desc: "피로가 쌓이고 기운이 탁해졌을 때, 산스베리아는 최고의 '에너지 정화기'가 됩니다. 음이온을 방출하고 밤에도 산소를 뿜어내며 당신의 방어막이 되어줍니다. 2026년, 외부의 스트레스로부터 당신을 지키고 단단한 내면의 힘을 기르고 싶다면 침대 옆이나 책상 위에 두는 것을 추천합니다.",
-      ctaText: "공기 정화 끝판왕 '사베리아' 추천",
+      ctaText: "공기 정화 끝판왕 '산스베리아' 추천",
       affiliateLink: "https://link.coupang.com/a/sansevieria"
     },
     SERENITY: {
