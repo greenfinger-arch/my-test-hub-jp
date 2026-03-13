@@ -22,7 +22,7 @@ export const WalletFortuneData = {
       a: [
         { text: "毎日整理して、一枚も入っていない", type: "GOLD" },
         { text: "数日分溜まっているが、整理はしている", type: "STABLE" },
-        { text: "レ시피와 카드로 지갑이 빵빵하다", type: "FLOW" },
+        { text: "レシピとカードで財布がパンパンする", type: "FLOW" },
         { text: "家計簿をつけるまで入れっぱなし", type: "SAVE" }
       ]
     },
