@@ -77,7 +77,7 @@ export const petFortuneData = {
       img: "/images/jpPetRes03.jpg",
       desc: "少し注意が必要です。環境が野生に近すぎると、家の中の秩序が乱れ、運気が不安定になります。特に窓際の配置やプラスチック容器の傷は「殺気」を生みやすいポイント。まずは食器を陶器に変え、観葉植物を置いて気の流れを整えましょう。それだけで、ペットの体調もあなたの運勢も安定し始めます。",
       ctaText: "空間の毒素を吸い取る「ペットに安全な観葉植物」",
-      affiliateLink: "ペットに安全な観葉植物"
+      affiliateLink: "https://amzn.to/4bXhuXO"
     },
     STRESS: {
       name: "SOSのサイン！「気のトゲが刺さった空間」",
