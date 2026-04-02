@@ -63,28 +63,28 @@ export const deskFortuneData = {
       img: "/images/jpDeskRes01.jpg",
       desc: "完璧です！入り口を見渡せる「龍穴」のポジションを確保できていますね。この配置は、周囲の状況を把握しやすく、チャンスを逃さないリーダーの相です。2026年はあなたの決断力が研ぎ澄まされ、大きな仕事や昇進の話が舞い込んでくるでしょう。自信を持って突き進んでください。",
       ctaText: "成功の象徴「高級デスクオーガナイザー」",
-      affiliateLink: "https://amzn.to/example_desk1"
+      affiliateLink: "https://amzn.to/4tmJ9II"
     },
     FOCUS: {
       name: "才能が開花する「静寂の知聖所」",
       img: "/images/jpDeskRes02.jpg",
       desc: "非常に高い集中力を発揮できる環境です。無駄を省き、目標に向かって一直線に進む力が備わっています。特に合格や資格取得を目指す方には最高の状態です。時々、デスクの右側に小さな青色の小物を置くと、さらに知的な運気が高まり、難問もスラスラ解けるようになるでしょう。",
       ctaText: "集中力を研ぎ澄ます「高性能デスクライト」",
-      affiliateLink: "https://amzn.to/example_desk2"
+      affiliateLink: "https://amzn.to/48qkT0f"
     },
     ANXIETY: {
       name: "ノイズに振り回される「迷いの操縦席」",
       img: "/images/jpDeskRes03.jpg",
       desc: "少し注意が必要です。背後の空間が気になったり、趣味のものが視界に入りすぎて、脳が常に「マルチタスク状態」で疲弊しています。まずは視界に入る色味を統一し、背後にパーテーションを置くか、椅子をハイバックのものに変えてみてください。それだけで「守られている安心感」が生まれ、集中力が倍増します。",
       ctaText: "安心感を確保する「ハイバックワークチェア」",
-      affiliateLink: "https://amzn.to/example_desk3"
+      affiliateLink: "https://amzn.to/3PCyYkZ"
     },
     LEAK: {
       name: "運気がすり抜ける「停滞のデスク」",
       img: "/images/jpDeskRes04.jpg",
       desc: "警告です！デスクの乱れは心の乱れ、そして運気の漏洩を意味します。出しっぱなしの書類は「古い気」を放ち、あなたの新しいチャンスを邪魔しています。まずは「1日5分」の片付けから始めましょう。PCの画面をきれいに拭き、水晶や小さな岩塩を置くことで、デスクに溜まった邪気を浄化してください。",
       ctaText: "邪気を払い浄化する「天然水晶クラスター」",
-      affiliateLink: "https://amzn.to/example_desk4"
+      affiliateLink: "https://amzn.to/3PHGOd2"
     }
   }
 };
